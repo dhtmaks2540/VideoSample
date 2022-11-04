@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/pv_guide_video"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_upload"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_upload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="영상 업로드"
+            app:layout_constraintBottom_toTopOf="@id/btn_record" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_record"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="영상 쵤영"
+            app:layout_constraintBottom_toTopOf="@id/btn_record_using_camerax" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_record_using_camerax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Camerax 영상 쵤영"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
